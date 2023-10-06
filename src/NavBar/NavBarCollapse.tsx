@@ -12,16 +12,28 @@ export interface NavBarCollapseProps {
   className?: string;
   style?: CSSProperties;
   navbarCollapseId?: string;
+  justifyContent?: "space-between" | "right" | "left";
   collapseRef?: (node: HTMLDivElement) => void;
   children: NavBarMenuType | NavBarMenuType[];
   priority?: number;
 }
 
 class NavBarCollapse extends PureComponent<NavBarCollapseProps> {
-  public static defaultProps: { navbarCollapseId: string; priority: number };
+  public static defaultProps: {
+    navbarCollapseId: string;
+    justityContent: string;
+    priority: number;
+  };
   render() {
-    const { style, collapseRef, navbarCollapseId, className, children } =
-      this.props;
+    const {
+      style,
+      collapseRef,
+      navbarCollapseId,
+      justifyContent,
+      className,
+      children,
+    } = this.props;
+    const justityContentClassName = `justify-${justifyContent}`;
     return (
       <div
         id={navbarCollapseId}
@@ -29,6 +41,7 @@ class NavBarCollapse extends PureComponent<NavBarCollapseProps> {
         ref={collapseRef}
         className={classNames(
           "rs-navbar-collapse navbar-collapse collapse",
+          justityContentClassName,
           className
         )}
       >
@@ -40,6 +53,7 @@ class NavBarCollapse extends PureComponent<NavBarCollapseProps> {
 
 NavBarCollapse.defaultProps = {
   navbarCollapseId: "navbarSupportedContent",
+  justityContent: "left",
   priority: 3,
 };
 

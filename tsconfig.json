@@ -15,12 +15,13 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
+    "isolatedModules": true,
     "paths": {
       "@/*": ["./src/*"],
       "@/styles": ["./src/assets/styles/*"]
     }
   },
-  "include": ["**/*.d.ts", "*.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["node_modules/@types/**/*.d.ts","**/*.d.ts", "*.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
     "build",
@@ -29,7 +30,8 @@
     "scripts",
     "acceptance-tests",
     "webpack",
-    "jest"
+    "jest",
+    "src/stories/**"
   ],
   "types": ["typePatches"]
 }

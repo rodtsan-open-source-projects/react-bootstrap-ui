@@ -22,10 +22,10 @@ class NavBarBrand extends PureComponent<NavBarBrandProps> {
         {children ?? (
           <Fragment>
             <span className="fa fa-brands fa-codepen" />
-            <span className="__spacer" />
-            <span className="navbar-brand-text navbar-brand--bold">
-              Demo JobSite
-            </span>
+            <span className="_spacer" />
+            <h4 className="navbar-brand-text navbar-brand--bold">
+              Website Demo
+            </h4>
           </Fragment>
         )}
       </a>

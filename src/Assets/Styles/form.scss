@@ -1,3 +1,25 @@
-.rs-form {
+.rs-form-wrapper > .form-horizontal {
   border-radius: 0.5rem;
+}
+
+.rs-form-wrapper > .form-horizontal {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  .form-group {
+    margin-bottom: 2rem;
+    .form-label {
+      &.hidden {
+        display: none;
+      }
+    }
+    .input-group-tel > .form-control,
+    .form-control {
+      width: 100%;
+      &:not(textarea) {
+        height: 4rem;
+      }
+    }
+  }
 }

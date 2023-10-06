@@ -87,7 +87,7 @@ class FormControl extends PureComponent<FormControlProps> {
         ) : (
           <label
             htmlFor={controlProps?.id}
-            className="rs-form-label form-label"
+            className={classNames("rs-form-label form-label", { hidden : isEmpty(label)})}
           >
             {label} {isInvalid && <span className="text-danger">*</span>}
           </label>

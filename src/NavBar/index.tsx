@@ -43,6 +43,7 @@ class NavBar extends PureComponent<NavBarProps> {
           "rs-navbar navbar",
           `navbar-expand-${expand}`,
           `navbar-${theme}`,
+          `bg-${theme}`,
           className
         )}
       >

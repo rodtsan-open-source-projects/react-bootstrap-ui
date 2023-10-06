@@ -27,3 +27,5 @@ export * from "./Card";
 export type { BsBreakpoint, BsVariant } from "./common/types";
 export { default as Row } from "./Row";
 export * from "./Row";
+export { default as Carousel } from "./Carousel";
+export * from "./Carousel";

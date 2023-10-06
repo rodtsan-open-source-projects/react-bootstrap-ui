@@ -133,7 +133,7 @@ dist
 # lock files
 package-lock.json
 *.lock
+.storybook
+stories/
+lib/
 
-
-# build files
-lib
